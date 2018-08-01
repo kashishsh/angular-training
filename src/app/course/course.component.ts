@@ -3,16 +3,19 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-course',
   template: `
-    Angular
-    <br />
-    <input [(ngModel)] = "email" (keyup.enter) ="onKeyUp()"/>
+    {{course.title | uppercase | lowercase }} <br/>
+    {{course.students | number}} <br/>
+    {{course.rating | number:'1.2-2'}} <br/>
+    {{course.price | currency: 'AUD'}} <br/>
+    {{course.releaseDate}} <br/>
   `
 })
 export class CourseComponent{
-  email = "a@b.com";
-  onKeyUp() {
-      // With event filtering
-      console.log(this.email);
-  }
-
+  course = {
+    title: 'Test course',
+    rating: 3.234,
+    students: 123456,
+    price: 123.45,
+    releaseDate: new Date(2018, 2, 3)
+  };
 }

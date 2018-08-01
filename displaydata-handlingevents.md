@@ -38,3 +38,15 @@ Answer : - Instead of passing parameters, we can use two way binding.
          - Syntax : [(ngModel)] = "email"
          - You need to import FormsModule in appmodule.ts to use ngModel.
 
+Question : What are pipes ?
+Answer : - We use pipes to format data. Following are some built in angular pipes :
+            1. Uppercase
+            2. Lowercase
+            3. Decimal
+            4. Currency
+            5. Percent
+        - Syntax : {{name | uppercase}}
+        - Multiple pipes can be chained together {{name | uppercase | lowercase}}.
+
+
+

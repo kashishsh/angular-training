@@ -90,3 +90,9 @@ Answer : - We need to instruct angular to create instance of that service and pa
          - We add all dependencies to be used by the components in this module to the providers array in module.ts file.
          - When we register dependency as a provider in module, angular will create a single instance of that class or module.
            Angular will pass the same instance to all the components using that service, this is called singleton pattern. So, a single instance of an object exists in the memory.
+
+Question : What is Injectable decorator ?
+Answer : We need this decorator in a service only if that service has dependency in its constructor. It tells angular that this           class is an injectable class, which means that angular should be able to inject dependency of this class to its                  constructor.
+
+Question : How to generate service using angular CLI ?
+Answer : - Run -> ng generate service name

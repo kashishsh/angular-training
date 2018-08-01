@@ -76,11 +76,17 @@ Question : What are directives ?
 Answer : - We use directives to manipulate the DOM. We can use them to add an element, remove existing DOM element, change class / style.
          - Directives which modifies the DOM use * in front of their name. eg : *ngFor
 
+Question : What are services ?
+Answer : - Instead to writing the http request in the component, we write services for the same. It makes debugging and writing unit test cases much easier. As we can fake the service while writing unit test cases instead of making actual call to the server.
+         - Unit test cases should never depend on live http calls.
+         - Writing http calls in component makes it tightly coupled and hard to test.
+         - Apart from http calls, component should not contain any logic other than the presentation logic. Services should be used for any logical stuff.
+         - Services can be used at multiple places in the project.
 
-
-
-
-
-
-
-
+Question : What is dependency injection ?
+Answer : - We need to instruct angular to create instance of that service and pass it to the constructor, this concept is called            dependency injection. Here we tell angular to inject class's dependency to its constructor.
+         - Dependency injection means injecting / providing the dependency of a class in its constructor.
+         - To use dependency injection, we need to register it in the module.
+         - We add all dependencies to be used by the components in this module to the providers array in module.ts file.
+         - When we register dependency as a provider in module, angular will create a single instance of that class or module.
+           Angular will pass the same instance to all the components using that service, this is called singleton pattern. So, a single instance of an object exists in the memory.

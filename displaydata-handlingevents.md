@@ -32,3 +32,9 @@ Question : What are template variables ?
 Answer : - We can use template variable to get reference to html elements.
          - Syntax <input #email (keyup.enter)="onKeyUp(email.value)"/>
 
+Question : What is two way binding ?
+Answer : - Instead of passing parameters, we can use two way binding.
+         - With property binding, directional binding is from component to view but two way binding, binding works two way and component also get updated with the DOM  changes.
+         - Syntax : [(ngModel)] = "email"
+         - You need to import FormsModule in appmodule.ts to use ngModel.
+

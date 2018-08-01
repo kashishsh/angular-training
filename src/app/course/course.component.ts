@@ -5,19 +5,14 @@ import { Component, OnInit } from '@angular/core';
   template: `
     Angular
     <br />
-    <input (keyup) ="onKeyUp($event)"/>
-    <input #email (keyup.enter) ="onKeyUp2(email.value)"/>
+    <input [(ngModel)] = "email" (keyup.enter) ="onKeyUp()"/>
   `
 })
 export class CourseComponent{
-  onKeyUp2(value) {
+  email = "a@b.com";
+  onKeyUp() {
       // With event filtering
-      console.log(value);
-  }
-  onKeyUp($event) {
-    // Without event filtering
-    if($event.keyCode === 13)
-      console.log('Enter was pressed');
+      console.log(this.email);
   }
 
 }

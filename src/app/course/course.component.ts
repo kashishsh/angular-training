@@ -3,15 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-course',
   template: `
-    <img src="{{imageUrl}}" />
-    <table>
-      <tr>
-        <td [attr.colspan]="colSpan"></td>
-      </tr>
-    </table>
+    Angular
+    <br />
+    <button class="btn btn-primary" [class.active]="isActive"> Save </button>
   `
 })
 export class CourseComponent{
-  imageUrl = "http://lorempixel.com/400/200";
-  colSpan = 2;
+  isActive = false;
 }

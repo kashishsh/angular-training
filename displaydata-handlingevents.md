@@ -6,3 +6,11 @@ Answer :
          - String interpolation works perfect to add values between headings, paragraphs, divs etc or wherever you want to render text.
          - Use property binding to bind property of a DOM element like src etc.
          - Property binding works only one way, i.e from component to DOM. If property field in the component changes, Angular will update the DOM, but and changes to the property is made from the DOM, corresponding property in the component will not change.
+
+- To install bootstrap in the application:
+  1.  run -> npm install bootstrap --save. This will download the bootstrap and save to node_modules folder and update package.json file.
+  2. Import bootstrap.css in styles.css by adding -> @import "~bootstrap/dist/css/bootstrap.css";
+
+Question : What is class binding ?
+Answer : - We can use class binding to add class dynamically to an element, based on some condition.
+         - Syntax : [class.className] = "isActive"

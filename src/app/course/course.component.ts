@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
     Angular
     <br />
     <input (keyup) ="onKeyUp($event)"/>
-    <input (keyup.enter) ="onKeyUp2()"/>
+    <input #email (keyup.enter) ="onKeyUp2(email.value)"/>
   `
 })
 export class CourseComponent{
-  onKeyUp2() {
+  onKeyUp2(value) {
       // With event filtering
-      console.log('Enter was pressed');
+      console.log(value);
   }
   onKeyUp($event) {
     // Without event filtering

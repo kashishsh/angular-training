@@ -25,4 +25,10 @@ Question : What is Event binding ?
 Answer : - Event binding is used to handle events raised from DOM, eg : click, mouseover etc.
          - Syntax : (click) = "onClick()"
          - To get reference to the event object, use paramter $event. eg : (click) = "onClick($event)"
+         - Event bubbling : An event bubbles the DOM tree.
+         - Use $event.stopPropogation() to stop event bubbling.
+
+Question : What are template variables ?
+Answer : - We can use template variable to get reference to html elements.
+         - Syntax <input #email (keyup.enter)="onKeyUp(email.value)"/>
 

@@ -48,5 +48,10 @@ Answer : - We use pipes to format data. Following are some built in angular pipe
         - Syntax : {{name | uppercase}}
         - Multiple pipes can be chained together {{name | uppercase | lowercase}}.
 
+Question : How to build custom pipes ?
+Answer : 1. Import Pipe, PipeTransform from angular/core
+         2. export pipe class and implement PipeTransform : telling angular compiler that this class should have the exact shape as the PipeTransform interface.
+         3. Register pipe in appmodule in declaration array.
+
 
 

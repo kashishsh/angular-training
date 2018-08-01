@@ -3,19 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-course',
   template: `
-    {{course.title | uppercase | lowercase }} <br/>
-    {{course.students | number}} <br/>
-    {{course.rating | number:'1.2-2'}} <br/>
-    {{course.price | currency: 'AUD'}} <br/>
-    {{course.releaseDate}} <br/>
+    {{ text | summary : 10}}
   `
 })
 export class CourseComponent{
-  course = {
-    title: 'Test course',
-    rating: 3.234,
-    students: 123456,
-    price: 123.45,
-    releaseDate: new Date(2018, 2, 3)
-  };
+  text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 }

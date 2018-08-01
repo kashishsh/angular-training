@@ -69,8 +69,12 @@ Answer : - run -> ng generate component my-component
 
 Question  : What is template ?
 Answer : - We use templates to perform data binding in any component. Data-bindings will be evaluated at the runtime and the actually value will be rendered to the html.
-         - We user {{}} for data binding.
+         - We user {{}} for data binding, this is called interpolation.
          - Methods of the component can also be binded with html.
+
+Question : What are directives ?
+Answer : - We use directives to manipulate the DOM. We can use them to add an element, remove existing DOM element, change class / style.
+         - Directives which modifies the DOM use * in front of their name. eg : *ngFor
 
 
 

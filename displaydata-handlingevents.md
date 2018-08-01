@@ -20,3 +20,9 @@ Answer : Add inline style to some element, based on some condition using style b
         - Syntax : [style.backgroundColor] = "isSelected ? 'blue' : 'red'"
         - Search for DOM style object on google to get all properties
 
+
+Question : What is Event binding ?
+Answer : - Event binding is used to handle events raised from DOM, eg : click, mouseover etc.
+         - Syntax : (click) = "onClick()"
+         - To get reference to the event object, use paramter $event. eg : (click) = "onClick($event)"
+

@@ -5,12 +5,19 @@ import { Component, OnInit } from '@angular/core';
   template: `
     Angular
     <br />
-    <button class="btn btn-primary" (click) = "onClick($event)"> Save </button>
+    <input (keyup) ="onKeyUp($event)"/>
+    <input (keyup.enter) ="onKeyUp2()"/>
   `
 })
 export class CourseComponent{
-  isActive = false;
-  onClick($event) {
-    console.log($event);
+  onKeyUp2() {
+      // With event filtering
+      console.log('Enter was pressed');
   }
+  onKeyUp($event) {
+    // Without event filtering
+    if($event.keyCode === 13)
+      console.log('Enter was pressed');
+  }
+
 }

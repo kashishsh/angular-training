@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     Angular
     <br />
-    <button class="btn btn-primary" [class.active]="isActive"> Save </button>
+    <button class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue' : 'red'"> Save </button>
   `
 })
 export class CourseComponent{

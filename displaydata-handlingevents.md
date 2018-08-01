@@ -14,3 +14,9 @@ Answer :
 Question : What is class binding ?
 Answer : - We can use class binding to add class dynamically to an element, based on some condition.
          - Syntax : [class.className] = "isActive"
+
+Question : What is style binding ?
+Answer : Add inline style to some element, based on some condition using style binding.
+        - Syntax : [style.backgroundColor] = "isSelected ? 'blue' : 'red'"
+        - Search for DOM style object on google to get all properties
+

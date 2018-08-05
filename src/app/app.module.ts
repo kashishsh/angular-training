@@ -11,6 +11,7 @@ import { AuthorsService } from './authors.service';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favourite/favorite.component';
 import { MyComponentComponent } from './my-component/my-component.component';
+import { PanelComponent } from './panel/panel.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MyComponentComponent } from './my-component/my-component.component';
     AuthorsComponent,
     SummaryPipe,
     FavoriteComponent,
-    MyComponentComponent
+    MyComponentComponent,
+    PanelComponent
   ],
   imports: [
   BrowserModule,

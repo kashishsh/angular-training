@@ -12,6 +12,7 @@ import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favourite/favorite.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { PanelComponent } from './panel/panel.component';
+import { LikesComponent } from './likes/likes.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PanelComponent } from './panel/panel.component';
     SummaryPipe,
     FavoriteComponent,
     MyComponentComponent,
-    PanelComponent
+    PanelComponent,
+    LikesComponent
   ],
   imports: [
   BrowserModule,

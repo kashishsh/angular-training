@@ -20,11 +20,11 @@ Answer :
   1. e2e(folder) : stands for End to End. Here we write end to end test for the application. There are basically automated test which simulates the real user.
   2. node_modules(folder) : Stores all the third party library on which the application may depend upon. This folder is for development purpose only. Part of this folder is deployed with the application and we don't put this folder to a server.
   3. src(folder) : Actual source code of the application lives in src folder.
-  4. src/app(folder) : Inside app folder we have a module and a component. Every application has atleast a module and a component.
+  4. src/app(folder) : Inside app folder we have a modules and a components. Every application has at least a module and a component.
   5. src/assets(folder) : Static assets of the application are stored inside this folder, like image, icon etc.
   6. src/environment(folder) : This is where we store the application setting for different environment like : production and development.
   7. Other files are :
-    - favicon.ico : It is the icon of the applicaiton.
+    - favicon.ico : It is the icon of the application.
     - index.html  : HTML file which contains our angular application. For now it don't have any reference to any .js and .css file. These references will be dynamically added to the page.
     - main.ts : This is the starting point of angular application. Works like a main method in other programming languages. Here we bootstrap the main module of the application.
     - pollyfills.ts : Required for angular to run.

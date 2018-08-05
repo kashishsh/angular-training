@@ -9,3 +9,7 @@ Question: How to mark a field of a component as Input property ?
 Answer : There are two ways to do so :
  1. Get Input from @angular/core and add @input() in front of its declaration in the class.
  2. Add Input properties in the component metadata.
+
+- To add alias to input property, pass alias of the property with @input. eg : @Input('alias-name') actualName: string;
+- If we use alias, the contract of the component remains safe. we can change the name of input property inside the component without affecting the application.
+

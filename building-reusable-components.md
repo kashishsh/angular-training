@@ -13,3 +13,5 @@ Answer : There are two ways to do so :
 - To add alias to input property, pass alias of the property with @input. eg : @Input('alias-name') actualName: string;
 - If we use alias, the contract of the component remains safe. we can change the name of input property inside the component without affecting the application.
 
+
+

@@ -1,3 +1,8 @@
+<button (click)="addCourse()">Add course</button>
 <ul>
-  <li *ngFor="let course of courses; index as i; even as isEven">{{i}} - {{isEven}} - {{course.name}}</li>
+  <li *ngFor="let course of courses; index as i; even as isEven">
+    {{i}} - {{isEven}} - {{course.name}}
+    <button (click)="onRemove(course)">Remove</button>
+    <button (click)="onUpdate(course)">Update</button>
+  </li>
 </ul>

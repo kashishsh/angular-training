@@ -1,0 +1,28 @@
+----{{courses.length}}
+
+<div *ngIf="courses.length > 0">
+  Courses goes here
+</div>
+<div *ngIf="courses.length == 0">
+  No courses to display
+</div>
+<hr/>
+This could also be written following <br/>
+
+<div *ngIf="courses.length > 0; else noCourses">
+  List of courses
+</div>
+<ng-template #noCourses>
+  No courses to display
+</ng-template>
+
+<hr/>
+or<br/>
+<div *ngIf="courses.length > 0; then coursesList else noCourses2"></div>
+<ng-template #coursesList>
+  List of courses
+</ng-template>
+<ng-template #noCourses2>
+  No courses to display
+</ng-template>
+

@@ -13,6 +13,7 @@ import { FavoriteComponent } from './favourite/favorite.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikesComponent } from './likes/likes.component';
+import { UnderstandingDirectivesComponent } from './understanding-directives/understanding-directives.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LikesComponent } from './likes/likes.component';
     FavoriteComponent,
     MyComponentComponent,
     PanelComponent,
-    LikesComponent
+    LikesComponent,
+    UnderstandingDirectivesComponent
   ],
   imports: [
   BrowserModule,

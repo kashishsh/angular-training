@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./understanding-directives.component.css']
 })
 export class UnderstandingDirectivesComponent implements OnInit {
-  courses = [1,2,3];
+  viewMode = "map";
   constructor() { }
 
   ngOnInit() {

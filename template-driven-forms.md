@@ -28,3 +28,7 @@
   -- We need to have the name attribute set for an input to use ngModel, which helps angular to distinguish between the form-controls.
 
 - Angular by default applies ngForm directive to all forms. ngForm also have all properties like touched, untouched, valid, invalid etc. ngForm.value contains the value of form in json format.
+
+- When we apply ngModel directive to an input, Angular automatically creates a form control object and associates that with that input field.
+- Angular automatically apply ngForm directive to your forms and it will internally create a formGroup object and associate it with the form. We can optionally apply ngModelGroup to groups in the form. It will also create a formGroup object for that group.
+- ngForm have output property submit to submit the form while ngModelGroup doesn't have that property.

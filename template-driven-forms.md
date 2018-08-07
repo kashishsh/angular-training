@@ -27,3 +27,4 @@
   -- syntax: [(ngModel)]="name"
   -- We need to have the name attribute set for an input to use ngModel, which helps angular to distinguish between the form-controls.
 
+- Angular by default applies ngForm directive to all forms. ngForm also have all properties like touched, untouched, valid, invalid etc. ngForm.value contains the value of form in json format.

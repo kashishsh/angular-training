@@ -6,6 +6,7 @@
             id="username"
             type="text"
             class="form-control">
+        <div class="alert alert-danger" *ngIf="username.touched && username.invalid">Username is required</div>
     </div>
     <div class="form-group">
         <label for="password">Password</label>
@@ -14,6 +15,7 @@
             id="password"
             type="text"
             class="form-control">
+            <div class="alert alert-danger" *ngIf="password.touched && password.invalid">Password is required</div>
     </div>
     <button class="btn btn-primary" type="submit">Sign Up</button>
 </form>

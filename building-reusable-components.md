@@ -41,5 +41,6 @@ Answer : The styles we apply to a component are scoped to the component and will
   2. ViewEncapsulatin.Native: It uses native browsers shadow dom concept and may not work in all browsers.
   3. ViewEncapsulatin.None: Style defined in this component will leak outside of the component.
 
-
+Question : How to create custom directives ?
+Answer : Run > ng g d input-format
 

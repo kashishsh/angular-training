@@ -14,6 +14,8 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikesComponent } from './likes/likes.component';
 import { UnderstandingDirectivesComponent } from './understanding-directives/understanding-directives.component';
+import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { UnderstandingDirectivesComponent } from './understanding-directives/und
     MyComponentComponent,
     PanelComponent,
     LikesComponent,
-    UnderstandingDirectivesComponent
+    UnderstandingDirectivesComponent,
+    InputFormatDirective,
+    ZippyComponent
   ],
   imports: [
   BrowserModule,

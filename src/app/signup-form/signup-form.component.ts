@@ -22,4 +22,11 @@ export class SignupFormComponent {
   get password() {
     return this.form.get('password');
   }
+  login() {
+    let isValid = false;
+    if (!isValid)
+      this.form.setErrors({
+        invalidLogin: true
+      });
+  }
 }

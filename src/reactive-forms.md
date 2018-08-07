@@ -5,3 +5,5 @@
 - In reactive forms, instead of using HTML5 attributes, we assign validators while creating formControl object.
 - In Angular, we have a Validator class which can be imported from @angular/forms.
 
+
+

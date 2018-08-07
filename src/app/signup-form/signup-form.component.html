@@ -6,6 +6,8 @@
             id="username"
             type="text"
             class="form-control">
+            <!-- Form control has a property pending, which will return true if atleast one async validator is in progress -->
+        <div *ngIf="username.pending">Checking for uniqueness</div>
         <div class="alert alert-danger" *ngIf="username.touched && username.invalid">
             <div *ngIf="username.errors.required">Username is required</div>
             <div *ngIf="username.errors.minlength">Username should be minimum {{username.errors.minlength.requiredLength}} characters</div>

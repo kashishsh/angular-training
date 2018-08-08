@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-posts',
@@ -12,7 +12,7 @@ export class PostsComponent implements OnInit {
   createPost(input: HTMLInputElement) {
     let post: any = { title: input.value };
 
-    this.http.post(this.url, JSON.stringify(post))
+    this.service.createPost(post)
       .subscribe(response => {
         post.id = response.json().id;
         this.posts.splice(0, 0, post);
@@ -20,19 +20,17 @@ export class PostsComponent implements OnInit {
       });
   }
   deletePost(post) {
-    this.http.delete(`${this.url}/${post.id}`).subscribe(response => {
-      let index = this.posts.indexOf(post.id);
+    this.service.deletePost(post.id).subscribe(response => {
+      let index = this.posts.indexOf(post);
       this.posts.splice(index, 1);
     });
-
-  //this.http.put(this.url, JSON.stringify(post));
   }
-  constructor(private http: Http) {
+  constructor(private service: PostService) {
 
   }
 
   ngOnInit() {
-    this.http.get(this.url)
+    this.service.getPosts()
       .subscribe(response => {
         this.posts = response.json();
       })

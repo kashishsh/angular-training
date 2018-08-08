@@ -15,6 +15,11 @@ Answer : They are special methods we can add to our component and angular will c
     Angular will only call these methods if they are defined.
 
 - Do not call http service inside your constructor, for initialization use ngOnInit method
+- Every class should have a single responsibility and such class is hard to maintain and test.
+- Component should only be responsible for presentation logic.
+- We should never call http services in our automated tests.
+- We should always create a service and it will be responsible for interacting with backend.
+
 
 
 

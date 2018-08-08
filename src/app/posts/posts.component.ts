@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../services/post.service';
+import { Response } from '@angular/http';
 
 @Component({
   selector: 'app-posts',
@@ -12,22 +13,35 @@ export class PostsComponent implements OnInit {
     let post: any = { title: input.value };
 
     this.service.createPost(post)
-      .subscribe(response => {
+      .subscribe(
+        response => {
         post.id = response.json().id;
         this.posts.splice(0, 0, post);
         input.value= "";
-      },  error => {
-        alert('Unexpected error occured');
-        console.log(error);
+      },
+        (error: Response) => {
+          if(error.status === 400){
+            //this.form.setErrors(error.json());
+          }
+          else {
+            alert('Unexpected error occured');
+            console.log(error);
+          }
+
       });
   }
   deletePost(post) {
-    this.service.deletePost(post.id).subscribe(response => {
-      let index = this.posts.indexOf(post);
+    this.service.deletePost(345).subscribe(
+      response => {
+        let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
-    },  error => {
-      alert('Unexpected error occured');
-      console.log(error);
+    },
+      (error: Response) => {
+        if(error.status === 404)
+          alert('This post has already been deleted')
+        else
+          alert('Unexpected error occured');
+          console.log(error);
     });
   }
   constructor(private service: PostService) {

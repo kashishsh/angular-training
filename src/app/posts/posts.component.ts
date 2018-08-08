@@ -8,7 +8,6 @@ import { PostService } from '../services/post.service';
 })
 export class PostsComponent implements OnInit {
   posts: any[];
-  private url = 'https://jsonplaceholder.typicode.com/posts';
   createPost(input: HTMLInputElement) {
     let post: any = { title: input.value };
 
@@ -17,12 +16,18 @@ export class PostsComponent implements OnInit {
         post.id = response.json().id;
         this.posts.splice(0, 0, post);
         input.value= "";
+      },  error => {
+        alert('Unexpected error occured');
+        console.log(error);
       });
   }
   deletePost(post) {
     this.service.deletePost(post.id).subscribe(response => {
       let index = this.posts.indexOf(post);
-      this.posts.splice(index, 1);
+        this.posts.splice(index, 1);
+    },  error => {
+      alert('Unexpected error occured');
+      console.log(error);
     });
   }
   constructor(private service: PostService) {
@@ -33,6 +38,9 @@ export class PostsComponent implements OnInit {
     this.service.getPosts()
       .subscribe(response => {
         this.posts = response.json();
+      },  error => {
+        alert('Unexpected error occured');
+        console.log(error);
       })
   }
 

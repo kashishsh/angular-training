@@ -26,6 +26,11 @@ Answer : They are special methods we can add to our component and angular will c
     - Network is down
     - Unhandled exceptions
 
+  2. Expected errors:
+    - Not found errors : 404
+    - Bad request : 400
+
+
 
 
 

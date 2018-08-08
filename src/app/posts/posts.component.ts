@@ -19,21 +19,23 @@ export class PostsComponent implements OnInit {
         input.value= "";
       });
   }
-  updatePost(post) {
-    this.http.patch(`${this.url}/${post.id}`, JSON.stringify({
-      isRead: true
-    })).subscribe(response => console.log(response.json()));
+  deletePost(post) {
+    this.http.delete(`${this.url}/${post.id}`).subscribe(response => {
+      let index = this.posts.indexOf(post.id);
+      this.posts.splice(index, 1);
+    });
 
   //this.http.put(this.url, JSON.stringify(post));
   }
   constructor(private http: Http) {
-    http.get(this.url)
-    .subscribe(response => {
-      this.posts = response.json();
-    })
+
   }
 
   ngOnInit() {
+    this.http.get(this.url)
+      .subscribe(response => {
+        this.posts = response.json();
+      })
   }
 
 }

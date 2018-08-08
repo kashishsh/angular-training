@@ -20,6 +20,13 @@ Answer : They are special methods we can add to our component and angular will c
 - We should never call http services in our automated tests.
 - We should always create a service and it will be responsible for interacting with backend.
 
+- We encounter two types of error in http service calls:
+  1. Unexpected errors:
+    - Server is offline
+    - Network is down
+    - Unhandled exceptions
+
+
 
 
 

@@ -25,7 +25,7 @@ export class PostsComponent implements OnInit {
         (error: AppError) => {
           if(error instanceof BadRequestError){
             //this.form.setErrors(error.json());
-            alert('Bad request');
+            alert(error.originalError);
           }
           else {
             alert('Unexpected error occured');

@@ -18,9 +18,9 @@ export class PostService {
     return this.http.post(this.url, JSON.stringify(post))
       .catch((error: Response) => {
         if(error.status === 400)
-          return Observable.throw(new BadRequestError());
+          return Observable.throw(new BadRequestError(error.json()));
 
-        return Observable.throw(new AppError(error));
+        return Observable.throw(new AppError(error.json()));
       });
   }
   deletePost(id) {

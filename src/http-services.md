@@ -36,6 +36,11 @@ Answer : They are special methods we can add to our component and angular will c
 - In angular, there is a class called ErrorHandler. which can be used to handle unexpeced application globally. We create class which implements ErorHandler and add it to app.module.ts's provider's  array so that it replace the ErrorHandler class used in the project :
   { provide: ErrorHandler, useClass: AppErrorHandler}
 
+- Observable vs promises :
+  - Observables are lazy : nothing happen if we don't subscribe to the observable.
+  - Promises are eager : As soon as you create the promise, code is executed.
+  - With observables we have very powerful operators like retry, which are not present with Promise.
+
 
 
 

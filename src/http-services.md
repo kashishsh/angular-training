@@ -31,7 +31,11 @@ Answer : They are special methods we can add to our component and angular will c
   2. Expected errors:
     - Not found errors : 404
     - Bad request : 400
--
+
+
+- In angular, there is a class called ErrorHandler. which can be used to handle unexpeced application globally. We create class which implements ErorHandler and add it to app.module.ts's provider's  array so that it replace the ErrorHandler class used in the project :
+  { provide: ErrorHandler, useClass: AppErrorHandler}
+
 
 
 

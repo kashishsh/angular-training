@@ -27,10 +27,7 @@ export class PostsComponent implements OnInit {
             //this.form.setErrors(error.json());
             alert(error.originalError);
           }
-          else {
-            alert('Unexpected error occured');
-            console.log(error);
-          }
+          else throw error;
         });
   }
   deletePost(post) {
@@ -42,10 +39,7 @@ export class PostsComponent implements OnInit {
       (error: AppError) => {
         if(error instanceof NotFoundError)
           alert('This post has already been deleted')
-        else {
-          alert('Unexpected error occured');
-          console.log(error);
-        }
+        else throw error;
     });
   }
   constructor(private service: PostService) {
@@ -56,10 +50,7 @@ export class PostsComponent implements OnInit {
     this.service.getPosts()
       .subscribe(response => {
         this.posts = response.json();
-      },  error => {
-        alert('Unexpected error occured');
-        console.log(error);
-      })
+      });
   }
 
 }

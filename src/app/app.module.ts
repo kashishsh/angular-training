@@ -30,7 +30,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AlertComponent } from './alert/alert.component'; 
+import { AlertComponent } from './alert/alert.component';
+import { UnderstandingLifecycleHooksComponent } from './understanding-lifecycle-hooks/understanding-lifecycle-hooks.component'; 
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { AlertComponent } from './alert/alert.component';
     GithubProfileComponent,
     NotFoundComponent,
     AlertComponent,
+    UnderstandingLifecycleHooksComponent,
   ],
   imports: [
     BrowserModule,
